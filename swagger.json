@@ -1,0 +1,136 @@
+{
+    "swagger" : "2.0",
+    "info": {
+        "version" : "1.0.0",
+        "title" : "Assignment"
+    },
+    "tags" : [
+        {
+            "name" : "Assignment",
+            "description" : "CRUD Assignment"
+        }
+    ],
+    "consumes" : [
+        "application/json"
+    ],
+    "produces" : [
+        "application/json"
+    ],
+    "paths": {
+        "/users" : {
+            "get" : {
+                "summary" : "Get API to fetch all Users",
+                "responses" : {
+                    "200" : {
+                        "description": "GET API output"
+                    }
+                }
+            },
+            "post" : {
+                "description" : "Post API to insert data",
+                "parameters" : [
+                    {
+                        "name" : "userBody",
+                        "in" : "body",
+                        "description" : "User that we want to create",
+                        "schema" : {
+                            "$ref": "#/definitions/userBody"
+                        }
+                    }
+                ],
+                "responses" : {
+                    "200" : {
+                        "description": "POST API output"
+                    },
+                    "400" : {
+                        "description": "Content Cannot be empty"
+                    },
+                    "500" : {
+                        "description": "Server Error"
+                    }
+                }
+            }
+        },
+        "/users/{userId}" : {
+            "parameters" : [
+                {
+                    "name" : "userId",
+                    "in" : "path",
+                    "required" : true,
+                    "description" : "user Id",
+                    "type": "integer"
+                }
+            ],
+            "get" : {
+                "summary" : "Get API",
+                "responses" : {
+                    "200" : {
+                        "description": "POST API output"
+                    },
+                    "400" : {
+                        "description": "Content Cannot be empty"
+                    },
+                    "500" : {
+                        "description": "Server Error"
+                    }
+                }
+            },
+            "put" : {
+                "summary" : "Update API",
+                "parameters" : [
+                    {
+                        "name" : "userBody",
+                        "in" : "body",
+                        "description" : "User that we want to create",
+                        "schema" : {
+                            "$ref": "#/definitions/userBody"
+                        }
+                    }
+                ],
+                "responses" : {
+                    "200" : {
+                        "description": "POST API output"
+                    },
+                    "400" : {
+                        "description": "Content Cannot be empty"
+                    },
+                    "500" : {
+                        "description": "Server Error"
+                    }
+                }
+            },
+            "delete" : {
+                "summary" : "Delete API",
+                "responses" : {
+                    "200" : {
+                        "description": "POST API output"
+                    },
+                    "400" : {
+                        "description": "Content Cannot be empty"
+                    },
+                    "500" : {
+                        "description": "Server Error"
+                    }
+                }
+            }
+        }
+    },
+    "definitions" : {
+        "userBody" : {
+            "properties" : {
+                "username" : {
+                    "type" : "string"
+                },
+                "age" : {
+                    "type" : "integer"
+                },
+                "hobbies" : {
+                    "type" : "array",
+                    "items" : {
+                        "type" : "string"
+                    }
+                }
+            }
+        }
+    }
+}

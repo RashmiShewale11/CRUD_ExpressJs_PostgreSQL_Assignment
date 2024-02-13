@@ -1,0 +1,29 @@
+{
+  "name": "crud_expressjs_postgresql_assignment",
+  "version": "1.0.0",
+  "description": "Assignment to create ExpreeJs Application for CRUD Operations using Postgresql Database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon index.js",
+    "build": "webpack --config webpack.config.js",
+    "start:prod": "npm run build && node dist/bundle.js"
+  },
+  "author": "Rashmi Shewale",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.2",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.0",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
