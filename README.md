@@ -22,7 +22,7 @@ Here are the required ones:
 
 ```
 
-PORT = 8801
+PORT = 
 
 DB_HOST = ''
 USERNAME = ''
@@ -35,7 +35,7 @@ DIALECT = ''
 
 ### Run the project
 
-Run the following command to run the project in development:
+Run the following command to run the project in dev:
 
 ```shell
 npm run start:dev
