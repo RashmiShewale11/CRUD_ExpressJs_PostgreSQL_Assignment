@@ -46,3 +46,5 @@ Run the following command to run the project in production :
 ```shell
 npm run start:prod
 ```
+
+Use Postman to test the API's or run localhost:PORT_NUMBER/api-docs on browser to open swagger
