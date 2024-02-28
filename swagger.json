@@ -65,7 +65,7 @@
                 "summary" : "Get API",
                 "responses" : {
                     "200" : {
-                        "description": "POST API output"
+                        "description": "GET API output"
                     },
                     "400" : {
                         "description": "Content Cannot be empty"
@@ -81,7 +81,7 @@
                     {
                         "name" : "userBody",
                         "in" : "body",
-                        "description" : "User that we want to create",
+                        "description" : "User that we want to update",
                         "schema" : {
                             "$ref": "#/definitions/userBody"
                         }
@@ -89,7 +89,7 @@
                 ],
                 "responses" : {
                     "200" : {
-                        "description": "POST API output"
+                        "description": "PUT API output"
                     },
                     "400" : {
                         "description": "Content Cannot be empty"
@@ -103,7 +103,7 @@
                 "summary" : "Delete API",
                 "responses" : {
                     "200" : {
-                        "description": "POST API output"
+                        "description": "DELETE API output"
                     },
                     "400" : {
                         "description": "Content Cannot be empty"
